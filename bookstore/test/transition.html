@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div[id^="transition"]{
+            width: 100px;
+            height: 100px;
+            background-color: hsl(90, 88%, 29%);
+            margin: 10px;
+            display: inline-block;
+            color: hsl(0, 50%, 100%);
+            text-align: center;
+        }
+        #transition-ease{
+            transition: transform 1s ease,background-color 1s ease;
+        }
+        #transition-linear{
+            transition: transform 1s linear,background-color 1s linear;
+        }
+        #transition-ease-in{
+            transition: transform 1s ease-in,background-color 1s ease-in;
+        }
+        #transition-ease-out{
+            transition: transform 1s ease-out,background-color 1s ease-out;
+        }
+        #transition-ease-in-out{
+            transition: transform 1s ease-in-out,background-color 1s ease-in-out;
+        }
+        div[id^="transition"]:hover{
+            transform: rotate(180deg);
+            background-color: hsl(60, 80%, 50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="transition-ease">ease</div>
+    <div id="transition-linear">linear</div>
+    <div id="transition-ease-in">ease-in</div>
+    <div id="transition-ease-out">ease-out</div>
+    <div id="transition-ease-in-out">ease-in-out</div>
+</body>
+</html>

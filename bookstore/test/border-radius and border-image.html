@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>border-radius和border-image</title>
+    <style>
+        body{display: flex;flex-flow: row wrap;}
+        #radius{
+            width: 300px;
+            margin: 5px;
+            border: solid 1px hsl(0, 2%, 60%);
+            border-radius: 0.5rem;
+        }
+        #border-image-1{
+            box-sizing: border-box;
+            width: 81px;
+            height: 81px;
+            padding: 27px;
+            border-image: url("../images/border-image.png")27 27 27 27 /27px;
+        }
+        .border-image-2{
+            box-sizing: border-box;
+            width: 400px;
+            height: 200px;
+            padding: 20px;
+        }
+        #border-image-21{
+            border-image: url("../images/about-bookstore.jpg")20 20 20 20 fill;
+        }
+        #border-image-22{
+            border-image: url("../images/about-bookstore.jpg")20 20 20 20 /20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="radius">圆角边框的水平和垂直半径为0.5rem</div>
+    <div id="border-image-1">27px</div>
+    <div id="border-image-21" class="border-image-2">有fill值，中间区域有图像</div>
+    <div id="border-image-22" class="border-image-2">无fill值，中间区域无图像</div>
+</body>
+</html>
